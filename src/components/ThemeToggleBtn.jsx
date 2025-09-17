@@ -3,13 +3,10 @@ import React, { useEffect } from 'react'
 import assets from '../assets/assets'
 
 const ThemeToggleBtn = ({theme,setTheme}) => {
-    // useEffect(()=>{
-    //     const PrefersDarkMode= window.matchMedia("(prefers-color-scheme: dark)");
-    //     setTheme(theme || (PrefersDarkMode ?'dark':''))
-    // })
+   
    useEffect(() => {
     if(theme === 'dark'){
-       console.log('dark mode');
+      
       document.documentElement.classList.add('dark')
    
     
