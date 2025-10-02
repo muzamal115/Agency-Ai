@@ -58,7 +58,7 @@ const App = () => {
       <Teams />
       <ContactUs />
       <Footer theme={theme} />
-      <div
+      {/* <div
         ref={outlineRef}
         className='fixed top-0 left-0 border w-10 h-10 rounded-full pointer-events-none border-primary z-[9999] transition transform 0.1s ease-out'
       >
@@ -67,7 +67,7 @@ const App = () => {
         ref={dotRef}
         className='fixed top-0 left-0 w-3 h-3 rounded-full pointer-events-none bg-primary z-[9999] '
       >
-      </div>
+      </div> */}
     </div>
   )
 }

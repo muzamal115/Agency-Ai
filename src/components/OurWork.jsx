@@ -2,7 +2,7 @@
 import React from 'react'
 import Title from './Title'
 import assets from '../assets/assets'
-
+import { motion } from "motion/react"
 const OurWork = () => {
     const workData=[
         {
@@ -22,12 +22,19 @@ const OurWork = () => {
         }
     ]
   return (
-    <div className=' flex flex-col items-center gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 pt-30 text-gray-700 dark:text-white'>
+    <motion.div
+     initial={{opacity:0,y:30}}
+     whileInView={{opacity:1,y:0}}
+     transition={{duration:0.5,delay:0.5}}
+     viewport={{once:true}}
+     className=' flex flex-col items-center gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 pt-30 text-gray-700 dark:text-white'>
         <Title title='Our latest work' desc='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam non officia nihil distinctio amet inventore facere temporibus eius dolore corrupti.' />
         <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 w-full max-w-5xl '>
             {
                 workData.map((work,index)=>(
-                   <div className='hover:scale-105 transition-all duration-500 cursor-pointer' key={index}>
+                   <div
+                  
+                   className='hover:scale-105 transition-all duration-500 cursor-pointer' key={index}>
                     <img className='w-full rounded-xl' src={work.image} alt="" />
                     <h3 className='mt-3 mb-2 text-lg font-semibold'>{work.title}</h3>
                     <p className='text-sm opacity-60 w-5/6'>{work.description}</p>
@@ -38,7 +45,7 @@ const OurWork = () => {
         </div>
         
 
-    </div>
+    </motion.div>
   )
 }
 

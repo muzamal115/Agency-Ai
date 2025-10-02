@@ -11,7 +11,7 @@ const ThemeToggleBtn = ({theme,setTheme}) => {
    
     
     } else {
-      console.log('light mode')
+     
       document.documentElement.classList.remove('dark')
       
     }
